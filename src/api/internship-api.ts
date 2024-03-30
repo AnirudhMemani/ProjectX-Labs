@@ -33,6 +33,6 @@ export const getInternshipsById = async (
       return response.data;
     }
   } catch (error) {
-    //
+    console.log();
   }
 };

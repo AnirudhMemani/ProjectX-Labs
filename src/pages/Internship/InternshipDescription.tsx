@@ -33,6 +33,7 @@ const InternshipDescription: React.FC = (): React.JSX.Element => {
         setInternshipInfo(response);
       }
     } catch (error) {
+      console.log();
     } finally {
       setIsLoading(false);
     }
