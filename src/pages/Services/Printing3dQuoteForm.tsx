@@ -86,7 +86,10 @@ const Printing3dQuoteForm: React.FC = (): React.JSX.Element => {
 
       const response = await sendPrintingRequirements(formData);
       if (response) {
-        navigate("/" + NavRoutes.SERVICES, { replace: true });
+        setTimeout(
+          () => navigate("/" + NavRoutes.SERVICES, { replace: true }),
+          2000
+        );
         setToastMessage("Your requirements has been sent successfully");
       }
     } catch (error) {

@@ -35,6 +35,7 @@ const SelectMenu: React.FC<TSelectMenuProps> = ({ options, onValueChange }) => {
             primary25: "rgba(38, 132, 255, 0.5)"
           }
         })}
+        required
       />
     </>
   );

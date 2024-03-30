@@ -19,6 +19,7 @@ const Services: React.FC = (): React.JSX.Element => {
       <img
         src={ServiceTopBackground}
         className="absolute top-0 -z-50 hidden h-dvh w-full md:block"
+        alt="Background image"
       />
       <div className="w-[90%]">
         <div className="flex w-full flex-col py-20 md:h-dvh md:flex-row md:justify-between md:pt-0">
