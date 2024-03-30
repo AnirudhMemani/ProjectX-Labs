@@ -88,7 +88,9 @@ const TextEditor: React.FC<{ buttonTitle: string }> = ({
           }
         }
       );
-      setToastMessage("Your blog has been saved successfully!");
+      if (response) {
+        setToastMessage("Your blog has been saved successfully!");
+      }
     } catch (error) {
       setToastMessage(
         "There was an error trying to save blog. Try again later!"
