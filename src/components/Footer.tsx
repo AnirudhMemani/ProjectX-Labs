@@ -2,7 +2,7 @@ import { Typography } from "@material-tailwind/react";
 import Logo from "../assets/images/xlabs_logo_white.png";
 import "../styles/index.css";
 import { useNavigate, Link } from "react-router-dom";
-import { NavRoutes } from "./constants";
+import { NavRoutes, ServicesNavRoutes } from "./constants";
 import { FaYoutube } from "react-icons/fa";
 
 type ItemsProps = {
@@ -20,6 +20,10 @@ const LINKS: LINKSProps = [
     title: "Services",
     items: [
       {
+        label: "3D Printing",
+        route: `/${NavRoutes.SERVICES}/${ServicesNavRoutes.PRINTING_3D}`
+      },
+      {
         label: "Custom Drones",
         route: NavRoutes.CUSTOM_DRONES
       },
@@ -30,10 +34,6 @@ const LINKS: LINKSProps = [
       {
         label: "Project Consultation",
         route: NavRoutes.PROJ_CONSULT
-      },
-      {
-        label: "CFD Analysis",
-        route: NavRoutes.CFD_ANALYSIS
       }
     ]
   },

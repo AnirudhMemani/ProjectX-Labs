@@ -93,7 +93,6 @@ const Printing3dQuoteForm: React.FC = (): React.JSX.Element => {
         setToastMessage("Your requirements has been sent successfully");
       }
     } catch (error) {
-      console.log("ERROR is as FOLLOWS:", error);
       setToastMessage("An unknown error occurred. Please try again later");
     } finally {
       setIsLoading(false);

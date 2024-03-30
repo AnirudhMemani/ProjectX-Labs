@@ -15,9 +15,7 @@ export const NavLinks: React.FC<TNavLinksProps> = ({
   const currentPath = decodeURIComponent(useLocation().pathname);
 
   useEffect(() => {
-    console.log("currentPath", currentPath);
     const parts = currentPath.split("/");
-    console.log("parts", parts);
     const secondPath =
       parts.length > 1 ? parts[parts.length - 2].toString() : null;
     if (

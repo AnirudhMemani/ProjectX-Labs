@@ -37,14 +37,6 @@ const DropDownButton: React.FC<DropDownButtonProps> = ({
     const firstPath = parts[parts.length - 1].toString();
     const secondPath =
       parts.length > 1 ? parts[parts.length - 2].toString() : null;
-    console.log(
-      "firstPath,",
-      firstPath,
-      "\n\nsecondPath:",
-      secondPath,
-      "\n\nroute:",
-      route
-    );
     if (
       route &&
       (route.toString() === firstPath || route.toString() === secondPath)

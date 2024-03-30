@@ -113,7 +113,6 @@ const Internship: React.FC = (): React.JSX.Element => {
         setInternshipInfo(response);
       }
     } catch (error) {
-      console.log("populateInternshipInfo() || ERROR:", error);
     } finally {
       setIsLoading(false);
     }

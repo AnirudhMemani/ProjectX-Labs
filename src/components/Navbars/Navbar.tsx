@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 import "../../styles/index.css";
 import { NavRoutes } from "../constants";
 import { NavLinks } from "./NavLinks";
@@ -8,6 +8,7 @@ import { twMerge } from "tailwind-merge";
 import { Divide as Hamburger } from "hamburger-react";
 import StaggeredDropDown from "../DropDown/StaggeredDropDown";
 import { motion, useScroll } from "framer-motion";
+import { useDebounce } from "../../CustomHooks/useDebounce";
 
 export const Navbar: React.FC = (): React.JSX.Element => {
   const [activeRoute, setActiveRoute] = useState<string | null>(null);
@@ -16,14 +17,22 @@ export const Navbar: React.FC = (): React.JSX.Element => {
     setActiveRoute(routeName);
     setIsNavMenuVisible(false);
   };
+  const [isVisible, setIsVisible] = useState(true);
+  const [scrollY, setScrollY] = useState(0);
+  const dbScrollY = useDebounce(scrollY, 50);
   const { scrollYProgress } = useScroll();
   const navMenuRef = useRef<HTMLDivElement>(null);
+
+  const handleScroll = useCallback(() => {
+    const cur = window.scrollY;
+    setIsVisible(dbScrollY > cur || cur < 10);
+    setScrollY(cur);
+  }, [dbScrollY]);
 
   useEffect(() => {
     if (isNavMenuVisible) {
       setIsNavMenuVisible(false);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeRoute]);
 
   useEffect(() => {
@@ -40,9 +49,17 @@ export const Navbar: React.FC = (): React.JSX.Element => {
     return () => document.removeEventListener("mousedown", closeNavMenu);
   }, []);
 
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [handleScroll]);
+
   return (
     <nav
-      className="relative top-0 z-50 flex w-full items-center justify-center text-black shadow-md shadow-[#374151] transition-all duration-300 ease-in-out lg:sticky lg:h-24 lg:bg-black"
+      className={twMerge(
+        "relative top-0 z-50 flex w-full items-center justify-center text-black shadow-md shadow-[#374151] transition-all duration-300 ease-in-out lg:sticky lg:h-24 lg:bg-black",
+        !isVisible ? "pointer-events-none opacity-0 lg:opacity-0" : ""
+      )}
       ref={navMenuRef}
     >
       <div

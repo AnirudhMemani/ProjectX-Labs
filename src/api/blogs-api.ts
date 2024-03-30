@@ -15,18 +15,15 @@ export const getAllBlogs = async () => {
       if (error.response?.status === 404) {
         return false;
       } else {
-        console.log(error);
         return null;
       }
     } else {
-      console.log(error);
       return null;
     }
   }
 };
 
 export const getBlogsById = async (id: string) => {
-  console.log("getBlogsById API hit");
   try {
     const response = await axios.get(`${import.meta.env.VITE_URL}blogs/${id}`);
     if (response.status === 200) {

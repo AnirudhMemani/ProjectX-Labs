@@ -18,7 +18,6 @@ export const WorkshopNavlinks: React.FC<WorkshopNavbarProps> = ({
   const currentPath = decodeURIComponent(useLocation().pathname);
 
   useEffect(() => {
-    console.log("routeName", routeName);
     const parts = currentPath.split("/");
 
     if (

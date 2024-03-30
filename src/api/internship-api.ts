@@ -15,7 +15,6 @@ export const getAllInternships = async (): Promise<
       return response.data;
     }
   } catch (error) {
-    console.log("getAllInternships() || ERROR:", error);
     throw error;
   }
 };
@@ -34,6 +33,6 @@ export const getInternshipsById = async (
       return response.data;
     }
   } catch (error) {
-    console.log(error);
+    //
   }
 };

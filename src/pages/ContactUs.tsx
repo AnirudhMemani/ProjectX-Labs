@@ -69,7 +69,6 @@ const ContactUs: React.FC = (): React.JSX.Element => {
         setIsTermsAccepted(false);
       }
     } catch (error) {
-      console.log(error);
       const knownError = error as Error | AxiosError;
       if (axios.isAxiosError(knownError)) {
         if (knownError.code === AXIOS_ERROR_CODE.NETWORK_ERROR) {
@@ -227,9 +226,9 @@ const ContactUs: React.FC = (): React.JSX.Element => {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="4"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="4"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   >
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
