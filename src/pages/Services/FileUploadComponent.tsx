@@ -70,20 +70,23 @@ const FileUploadComponent: React.FC<UploadComponentState> = ({
   return (
     <div className="flex w-full flex-col justify-center gap-2">
       <div className="flex items-center gap-4">
-        <CustomInput
-          type="file"
-          multiple={true}
-          required
-          onChange={handleSelectedFiles}
-          className={twMerge(
-            "w-fit cursor-pointer",
-            uploadedFiles.length > 0
-              ? "line-clamp-1 text-ellipsis border-b-0 text-transparent"
-              : ""
-          )}
-          value={uploadedFiles.length < 1 ? "" : undefined}
-          accept=".STL"
-        />
+        <div>
+          <p className="px-2 text-sm text-[#CECECE]">Upload STL files:</p>
+          <CustomInput
+            type="file"
+            multiple={true}
+            required
+            onChange={handleSelectedFiles}
+            className={twMerge(
+              "w-fit cursor-pointer",
+              uploadedFiles.length > 0
+                ? "line-clamp-1 text-ellipsis border-b-0 text-transparent"
+                : ""
+            )}
+            value={uploadedFiles.length < 1 ? "" : undefined}
+            accept=".STL"
+          />
+        </div>
         {uploadedFiles.length > 0 && (
           <span>Total files selected: {uploadedFiles.length}</span>
         )}
