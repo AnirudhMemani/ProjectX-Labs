@@ -60,8 +60,8 @@ const InternshipCard: React.FC<IInternshipCardProps> = ({
         />
       </div>
       <div className="grid w-full grid-cols-2 text-sm text-[#6941C6]">
-        {content.map((contents) => (
-          <div className="flex items-center gap-1 py-[2px]">
+        {content.map((contents, index) => (
+          <div className="flex items-center gap-1 py-[2px]" key={index}>
             <contents.icon size={14} />
             <p>{contents.title}</p>
           </div>

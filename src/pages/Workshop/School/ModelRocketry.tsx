@@ -1,4 +1,4 @@
-import useWindowDimensions from "@/CustomHooks/hooks";
+import useWindowDimensions from "@/hooks/hooks";
 import ModelRocketryLanding from "../../../assets/images/xlabs_modelRocketryLanding.png";
 import ModelRocketryLandingFull from "../../../assets/images/xlabs_modelRocketryLandingFull.png";
 import { useState, useEffect } from "react";

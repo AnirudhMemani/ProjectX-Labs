@@ -8,7 +8,7 @@ import { twMerge } from "tailwind-merge";
 import { Divide as Hamburger } from "hamburger-react";
 import StaggeredDropDown from "../DropDown/StaggeredDropDown";
 import { motion, useScroll } from "framer-motion";
-import { useDebounce } from "../../CustomHooks/useDebounce";
+import { useDebounce } from "../../hooks/useDebounce";
 
 export const Navbar: React.FC = (): React.JSX.Element => {
   const [activeRoute, setActiveRoute] = useState<string | null>(null);

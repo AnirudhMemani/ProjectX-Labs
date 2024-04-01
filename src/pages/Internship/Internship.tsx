@@ -209,7 +209,10 @@ const Internship: React.FC = (): React.JSX.Element => {
           {searchBarValue.length > 0 ? (
             filteredInternshipInfo.length > 0 ? (
               filteredInternshipInfo.map((filteredInfo, index) => (
-                <div className="h-fit rounded-lg border border-input p-6">
+                <div
+                  className="h-fit rounded-lg border border-input p-6"
+                  key={index}
+                >
                   <InternshipCard
                     key={index}
                     title={filteredInfo.title}
@@ -236,7 +239,10 @@ const Internship: React.FC = (): React.JSX.Element => {
             )
           ) : internshipInfo.length > 0 ? (
             internshipInfo.map((info, index) => (
-              <div className="h-fit rounded-lg border border-input p-6">
+              <div
+                className="h-fit rounded-lg border border-input p-6"
+                key={index}
+              >
                 <InternshipCard
                   key={index}
                   title={info.title}

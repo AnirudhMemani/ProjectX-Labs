@@ -1,4 +1,4 @@
-import useWindowDimensions from "@/CustomHooks/hooks";
+import useWindowDimensions from "@/hooks/hooks";
 import QuadDroneLanding from "../../../assets/images/xlabs_quadDrone.png";
 import QuadDroneLandingFull from "../../../assets/images/xlabs_quadDroneFull.png";
 import { useState, useEffect } from "react";

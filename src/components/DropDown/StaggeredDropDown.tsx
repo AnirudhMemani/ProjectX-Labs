@@ -8,7 +8,7 @@ import React, {
   useState
 } from "react";
 import { useNavigate } from "react-router-dom";
-import useWindowDimensions from "@/CustomHooks/hooks";
+import useWindowDimensions from "@/hooks/hooks";
 import DropDownButton from "./DropDownButton";
 import { twMerge } from "tailwind-merge";
 

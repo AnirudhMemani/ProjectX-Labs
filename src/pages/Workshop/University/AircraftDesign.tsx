@@ -1,4 +1,4 @@
-import useWindowDimensions from "@/CustomHooks/hooks";
+import useWindowDimensions from "@/hooks/hooks";
 import AircraftDesignLanding from "../../../assets/images/xlabs_aircraftDesign.png";
 import AircraftDesignLandingFull from "../../../assets/images/xlabs_aircraftDesignFull.png";
 import { useState, useEffect } from "react";

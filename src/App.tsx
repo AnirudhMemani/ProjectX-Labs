@@ -20,7 +20,7 @@ import ServiceRoutes from "./routes/ServiceRoutes";
 import { ScrollToTopButton } from "./components/ScrollToTopButton";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import useWindowDimensions from "./CustomHooks/hooks";
+import useWindowDimensions from "./hooks/hooks";
 
 const App: React.FC = (): React.JSX.Element => {
   const { width } = useWindowDimensions();

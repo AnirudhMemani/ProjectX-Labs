@@ -1,4 +1,4 @@
-import useWindowDimensions from "@/CustomHooks/hooks";
+import useWindowDimensions from "@/hooks/hooks";
 import CompositeLanding from "../../../assets/images/xlabs_composite.png";
 import CompositeLandingFull from "../../../assets/images/xlabs_compositeFull.jpeg";
 import { useState, useEffect } from "react";

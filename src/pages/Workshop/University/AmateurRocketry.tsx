@@ -1,4 +1,4 @@
-import useWindowDimensions from "@/CustomHooks/hooks";
+import useWindowDimensions from "@/hooks/hooks";
 import AmateurRocket from "../../../assets/images/xlabs_amateurRocketry.png";
 import AmateurRocketryFull from "../../../assets/images/xlabs_amateurRocketryFull.png";
 import { useState, useEffect } from "react";

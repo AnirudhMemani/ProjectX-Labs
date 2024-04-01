@@ -1,4 +1,4 @@
-import useWindowDimensions from "@/CustomHooks/hooks";
+import useWindowDimensions from "@/hooks/hooks";
 import WaterRocketryLanding from "../../../assets/images/xlabs_waterRocketryLanding.png";
 import WaterRocketryLandingFull from "../../../assets/images/xlabs_waterRocketryLandingFull.png";
 import { useState, useEffect } from "react";

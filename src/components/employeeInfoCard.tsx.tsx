@@ -32,10 +32,6 @@ export const EmployeeInfoCard: React.FC<EmployeeInfoCardProps> = ({
           <h1 className="text-xl font-bold text-white">{name}</h1>
 
           <div className="my-3 h-[2px] w-full bg-gradient-to-r from-[#00d4ff] to-[#1f2937]" />
-          {/* <p className="mb-3 text-base text-[#9CA3AF]">
-            {name} drives the technical and strategy of the ProjectX Labs
-            platform and brand
-          </p> */}
           <div className="flex items-center justify-between">
             <h3 className="text-base text-[#6B7280]">{position}</h3>
             {linkedinUrl && (

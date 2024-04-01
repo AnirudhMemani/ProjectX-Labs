@@ -1,4 +1,4 @@
-import useWindowDimensions from "@/CustomHooks/hooks";
+import useWindowDimensions from "@/hooks/hooks";
 import Printing3D from "../../../assets/images/xlabs_3dprinting.png";
 import Printing3dFull from "../../../assets/images/xlabs_mob_printing3d.png";
 import { useState, useEffect } from "react";

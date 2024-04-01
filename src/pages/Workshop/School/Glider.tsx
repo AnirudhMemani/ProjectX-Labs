@@ -1,4 +1,4 @@
-import useWindowDimensions from "@/CustomHooks/hooks";
+import useWindowDimensions from "@/hooks/hooks";
 import GliderLanding from "../../../assets/images/xlabs_gliderLanding.png";
 import GliderLandingFull from "../../../assets/images/xlabs_gliderLandingFull.jpeg";
 import { useState, useEffect } from "react";

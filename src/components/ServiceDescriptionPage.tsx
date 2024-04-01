@@ -66,9 +66,11 @@ const ServiceDescriptionPage: React.FC<ServiceDescriptionProps> = ({
         className="mb-3 font-sans text-5xl font-semibold sm:text-7xl sm:font-bold"
         data-aos="fade-left"
       >
-        {parts.map((word) => (
+        {parts.map((word, index) => (
           <>
-            <span className="uppercase">{word}</span>
+            <span key={index} className="uppercase">
+              {word}
+            </span>
             <br />
           </>
         ))}

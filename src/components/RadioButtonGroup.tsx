@@ -13,8 +13,8 @@ export const RadioButtonGroup: React.FC<TRadioButtonGroupProps> = ({
 }): React.JSX.Element => {
   return (
     <>
-      {Object.values(options).map((value) => (
-        <div className="flex gap-2 text-[#CECECE]">
+      {Object.values(options).map((value, index) => (
+        <div className="flex gap-2 text-[#CECECE]" key={index}>
           <input
             type="radio"
             value={value}

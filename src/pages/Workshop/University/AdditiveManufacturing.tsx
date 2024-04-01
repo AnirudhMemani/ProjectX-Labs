@@ -1,4 +1,4 @@
-import useWindowDimensions from "@/CustomHooks/hooks";
+import useWindowDimensions from "@/hooks/hooks";
 import AdditiveManufacture from "../../../assets/images/xlabs_additiveManufacturing.png";
 import AdditiveManufacturingFull from "../../../assets/images/xlabs_additiveManufacturingFull.png";
 import { useState, useEffect } from "react";
