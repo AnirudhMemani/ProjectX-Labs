@@ -19,8 +19,9 @@ const AnimatedServiceCard: React.FC<AnimatedServiceCardProps> = ({
   return (
     <Animated3dCard>
       <div
-        className="group/card card__container relative h-auto w-auto rounded-xl border border-white/[0.2] bg-black p-6 [transform-style:preserve-3d] hover:shadow-2xl hover:shadow-emerald-500/[0] sm:w-[25rem] [&>*]:[transform-style:preserve-3d]"
+        className="group/card card__container relative h-auto w-auto cursor-pointer rounded-xl border border-white/[0.2] bg-black p-6 [transform-style:preserve-3d] hover:shadow-2xl hover:shadow-emerald-500/[0] sm:w-[25rem] [&>*]:[transform-style:preserve-3d]"
         data-aos={"zoom-in"}
+        onClick={leftButtonOnClick}
       >
         <div
           className="card__title w-fit text-xl font-bold text-white transition duration-200 ease-linear"
