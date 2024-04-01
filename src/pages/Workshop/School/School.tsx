@@ -11,7 +11,7 @@ const School: React.FC = (): React.JSX.Element => {
     <section className="flex min-h-dvh w-full flex-col text-white">
       <div className="pb-20">
         <div
-          className="flex w-full items-center justify-center pt-12 lg:pt-32"
+          className="flex w-full items-center justify-center pt-16 lg:pt-32"
           data-aos="fade-down"
           data-aos-once={true}
         >

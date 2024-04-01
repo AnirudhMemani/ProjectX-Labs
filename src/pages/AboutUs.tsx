@@ -112,10 +112,10 @@ const AboutUs: React.FC = (): React.JSX.Element => {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center">
-      <section className="relative flex h-dvh w-full justify-center bg-black sm:items-center md:bg-[url('../assets/images/xlabs_fullTeam.png')] md:bg-cover md:bg-center md:bg-no-repeat xl:bg-center">
+    <main className="flex flex-col items-center justify-center">
+      <section className="relative flex w-full justify-center bg-black pb-16 sm:items-center md:bg-[url('../assets/images/xlabs_fullTeam.png')] md:bg-cover md:bg-center md:bg-no-repeat lg:h-dvh lg:pb-0 xl:bg-center">
         <div
-          className="relative mb-24 flex w-[95%] flex-col md:w-[90%] xl:w-[65%]"
+          className="relative flex w-[95%] flex-col md:w-[90%] xl:w-[65%]"
           data-aos="fade-down"
           data-aos-once={true}
         >
@@ -167,8 +167,9 @@ const AboutUs: React.FC = (): React.JSX.Element => {
           </p>
         </div>
       </section>
+      {/* Mission and Vision */}
       <section
-        className="relative flex w-full items-center justify-center overflow-x-clip py-20 md:h-[120dvh] md:py-0 2xl:h-dvh"
+        className="relative flex h-fit w-full items-center justify-center overflow-x-clip py-24 lg:h-dvh lg:py-10"
         style={{
           background: "linear-gradient(180deg, #011330 100%, #091d3ed9)"
         }}
@@ -185,13 +186,13 @@ const AboutUs: React.FC = (): React.JSX.Element => {
           data-aos="fade-left"
           data-aos-once={true}
         />
-        <div className="m-0 mx-6 flex h-full flex-col items-center justify-center md:mx-0 md:flex-row md:gap-6">
+        <div className="flex h-full w-[90%] flex-col items-center justify-center gap-6 md:flex-row">
           {infoCards.map((info) => (
             <div
-              className="card group relative z-10 my-8 h-[80%] cursor-pointer overflow-y-hidden rounded-[10px] border border-[#ffffff26] bg-none px-6 py-[50px] text-center text-[#0d7586] transition-all duration-100 ease-in md:mx-5 md:my-0 md:hover:text-black lg:mx-0 xl:h-[70%]"
+              className="card group relative z-10 cursor-pointer overflow-y-hidden rounded-[10px] border border-[#ffffff26] bg-none px-6 py-10 text-center text-[#0d7586] transition-all duration-100 ease-in md:hover:text-black lg:p-8 2xl:p-16"
               style={{ width: "calc(34% - 20px)" }}
               key={info.id}
-              data-aos={info.animation}
+              //   data-aos={info.animation}
               data-aos-once={true}
             >
               <div className="flex w-full  flex-col items-center justify-center transition-all duration-300 ease-in md:group-hover:scale-105">
@@ -208,7 +209,8 @@ const AboutUs: React.FC = (): React.JSX.Element => {
           ))}
         </div>
       </section>
-      <section className="my-16 flex min-h-dvh w-full flex-col items-center bg-black">
+      {/* Team */}
+      <section className="flex w-full flex-col items-center bg-black py-16 md:py-32">
         <div
           className="team__header mb-4 w-[80%] text-center text-5xl text-white sm:text-6xl md:text-left"
           data-aos="fade-down-right"
@@ -228,7 +230,7 @@ const AboutUs: React.FC = (): React.JSX.Element => {
           ))}
         </div>
       </section>
-    </div>
+    </main>
   );
 };
 
