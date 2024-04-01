@@ -209,7 +209,7 @@ export const FDMPrintSelectMenuOptions: TOptionsType[] = [
 
 export const SLAPrintSelectMenuOptions: TOptionsType[] = [
   { value: "Standard resin grey", label: "Standard resin grey" },
-  { value: "Clear resin. Moq-200cc", label: "Clear resin. Moq-200cc" },
-  { value: "Dental resin. Moq-200cc", label: "Dental resin. Moq-200cc" },
-  { value: "Though resin. moQ-200cc", label: "Though resin. moQ-200cc" }
+  { value: "Clear resin. MOQ-200cc", label: "Clear resin. MOQ-200cc" },
+  { value: "Dental resin. MOQ-200cc", label: "Dental resin. MOQ-200cc" },
+  { value: "Tough resin. MOQ-200cc", label: "Tough resin. MOQ-200cc" }
 ];

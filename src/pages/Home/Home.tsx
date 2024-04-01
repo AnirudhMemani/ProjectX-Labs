@@ -21,18 +21,6 @@ const Home: React.FC = (): React.JSX.Element => {
 
   return (
     <>
-      <section className="h-fit w-full bg-black text-white">
-        <div className="flex h-[85vh] w-full justify-center sm:block lg:h-fit lg:w-fit">
-          <video
-            src={Intro}
-            autoPlay={true}
-            loop={true}
-            muted
-            poster={Thumbnail}
-            className="h-full w-full object-fill"
-          />
-        </div>
-      </section>
       <div className="h-dvh">
         <ServiceDescriptionPage
           title={HomePageImageTrailPropsArray[activeIndex].title}
@@ -59,6 +47,18 @@ const Home: React.FC = (): React.JSX.Element => {
           className="justify-center"
         />
       </div>
+      <section className="h-fit w-full bg-black text-white">
+        <div className="flex h-dvh w-full justify-center sm:block">
+          <video
+            src={Intro}
+            autoPlay={true}
+            loop={true}
+            muted
+            poster={Thumbnail}
+            className="h-full w-full object-fill"
+          />
+        </div>
+      </section>
     </>
   );
 };
