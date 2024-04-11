@@ -63,7 +63,7 @@ const ServiceDescriptionPage: React.FC<ServiceDescriptionProps> = ({
         </>
       )}
       <h3
-        className="mb-3 font-sans text-5xl font-semibold sm:text-7xl sm:font-bold"
+        className="mb-3 font-sans text-3xl font-bold sm:text-7xl"
         data-aos="fade-left"
       >
         {parts.map((word, index) => (
@@ -75,7 +75,7 @@ const ServiceDescriptionPage: React.FC<ServiceDescriptionProps> = ({
           </>
         ))}
       </h3>
-      <p className="mb-12 font-sans text-xl" data-aos="fade-right">
+      <p className="mb-12 font-sans text-base sm:text-xl" data-aos="fade-right">
         {content}
       </p>
       <div className="flex flex-col gap-6 lg:flex-row">
