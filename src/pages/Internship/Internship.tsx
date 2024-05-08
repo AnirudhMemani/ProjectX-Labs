@@ -5,8 +5,8 @@ import { IoMdClose } from "react-icons/io";
 import { IoIosSearch } from "react-icons/io";
 import { twMerge } from "tailwind-merge";
 import { getAllInternships } from "@/api/internship-api";
-import { AnimatedLoader } from "@/components/Loader/AnimatedLoader";
 import { Toast } from "@/components/Toast";
+import InternshipSkeleton from "./InternshipSkeleton";
 
 export type TInternshipInfo = {
   title: string;
@@ -206,7 +206,13 @@ const Internship: React.FC = (): React.JSX.Element => {
               : ""
           )}
         >
-          {searchBarValue.length > 0 ? (
+          {isLoading ? (
+            <div className="grid h-full w-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {Array.from({ length: 10 }, (_, index) => (
+                <InternshipSkeleton key={index} />
+              ))}
+            </div>
+          ) : searchBarValue.length > 0 ? (
             filteredInternshipInfo.length > 0 ? (
               filteredInternshipInfo.map((filteredInfo, index) => (
                 <div
@@ -269,7 +275,6 @@ const Internship: React.FC = (): React.JSX.Element => {
           )}
         </div>
       </div>
-      {isLoading && <AnimatedLoader />}
       <Toast toastMessage={toastMessage} setToastMessage={setToastMessage} />
     </section>
   );

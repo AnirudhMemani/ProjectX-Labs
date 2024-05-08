@@ -116,7 +116,7 @@ const Printing3dQuoteForm: React.FC = (): React.JSX.Element => {
             From concept to creation <br /> Request a 3D printing quote today
           </h1>
           <p className="text-center text-sm text-[#CECECE]">
-            You wil get a response within 24 hours.
+            You will get a response from our team within 24 hours.
           </p>
         </div>
         <form

@@ -6,7 +6,6 @@ import { AXIOS_ERROR_CODE, STATUS_CODES } from "@/components/constants";
 import { Toast } from "@/components/Toast";
 import { AiOutlineExclamationCircle } from "react-icons/ai";
 import { twMerge } from "tailwind-merge";
-import { AnimatedLoader } from "@/components/Loader/AnimatedLoader";
 
 const ContactUs: React.FC = (): React.JSX.Element => {
   const [formName, setFormName] = useState<string>("");
@@ -146,6 +145,7 @@ const ContactUs: React.FC = (): React.JSX.Element => {
                 maxLength={50}
                 onChange={(e) => setFormName(e.target.value)}
                 value={formName}
+                disabled={isLoading}
               />
               <input
                 type="email"
@@ -171,6 +171,7 @@ const ContactUs: React.FC = (): React.JSX.Element => {
                 }}
                 ref={emailRef}
                 value={formEmail}
+                disabled={isLoading}
               />
               <input
                 type="text"
@@ -179,6 +180,7 @@ const ContactUs: React.FC = (): React.JSX.Element => {
                 maxLength={300}
                 onChange={(e) => setFormSubject(e.target.value)}
                 value={formSubject}
+                disabled={isLoading}
               />
               <div className="mt-2 block w-full">
                 <textarea
@@ -192,6 +194,7 @@ const ContactUs: React.FC = (): React.JSX.Element => {
                   className="w-full resize-none rounded-lg border border-sky-500 bg-black p-2 text-white caret-sky-500 outline-none placeholder:text-sm"
                   aria-label="message"
                   placeholder="write your message here..."
+                  disabled={isLoading}
                 ></textarea>
                 <span className="mr-2 block text-end text-xs text-[#9CA3AF]">
                   {`${formMessage?.length}/${MAX_CHAR_LENGTH}`}
@@ -210,6 +213,7 @@ const ContactUs: React.FC = (): React.JSX.Element => {
                     className="peer relative h-4 w-4 cursor-pointer appearance-none rounded border-gray-300 bg-gray-100 checked:bg-sky-500"
                     onChange={(e) => setIsTermsAccepted(e.target.checked)}
                     checked={isTermsAccepted}
+                    disabled={isLoading}
                   />
                   <label className="ms-2 cursor-text text-sm text-gray-200">
                     I agree with the{" "}
@@ -246,7 +250,8 @@ const ContactUs: React.FC = (): React.JSX.Element => {
               <input
                 type="submit"
                 className="cursor-pointer rounded-md bg-sky-500 py-2 text-white transition-all duration-200 ease-in-out hover:bg-sky-600 active:scale-95 aria-disabled:cursor-not-allowed aria-disabled:bg-sky-800 aria-disabled:hover:bg-sky-800 aria-disabled:active:scale-100"
-                aria-disabled={!isTermsAccepted}
+                aria-disabled={!isTermsAccepted || isLoading}
+                value={isLoading ? "Sending..." : "Send"}
               />
             </form>
           </div>
@@ -266,7 +271,6 @@ const ContactUs: React.FC = (): React.JSX.Element => {
         </div>
       </div>
       <Toast toastMessage={toastMessage} setToastMessage={setToastMessage} />
-      {isLoading && <AnimatedLoader />}
     </div>
   );
 };

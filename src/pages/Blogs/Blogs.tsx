@@ -4,11 +4,11 @@ import { twMerge } from "tailwind-merge";
 import BlogCard from "./BlogCard";
 import { getAllBlogs } from "@/api/blogs-api";
 import { Toast } from "@/components/Toast";
-import { AnimatedLoader } from "@/components/Loader/AnimatedLoader";
 import RecentPosts from "./RecentPosts";
 import { IoMdClose } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import ReactPaginate from "react-paginate";
+import BlogSkeleton from "./BlogSkeleton";
 
 export type TBlogsInfo = {
   adminId: string;
@@ -126,7 +126,13 @@ const Blogs = () => {
             ProjectX Blogs<span className="font-bold text-sky-500">.</span>
           </h1>
         </div>
-        {currentItems.length > 0 ? (
+        {isLoading ? (
+          <div className="grid w-full grid-cols-4 gap-8">
+            {Array.from({ length: 10 }, (_, index) => (
+              <BlogSkeleton key={index} />
+            ))}
+          </div>
+        ) : currentItems.length > 0 ? (
           <>
             {/* Recent Blog title*/}
             {showRecentBlogs && (
@@ -200,7 +206,9 @@ const Blogs = () => {
                           left: 0,
                           behavior: "smooth"
                         });
-                        navigate(filteredBlog?.blogId, { state: filteredBlog });
+                        navigate(filteredBlog?.blogId, {
+                          state: filteredBlog
+                        });
                       }}
                     />
                   ))
@@ -220,7 +228,11 @@ const Blogs = () => {
                     thumbnail={URL + blog?.thumbnail}
                     author={blog?.author}
                     onClick={() => {
-                      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+                      window.scrollTo({
+                        top: 0,
+                        left: 0,
+                        behavior: "smooth"
+                      });
                       navigate(blog?.blogId, { state: blog });
                     }}
                   />
@@ -254,7 +266,6 @@ const Blogs = () => {
         )}
       </div>
       <Toast toastMessage={toastMessage} setToastMessage={setToastMessage} />
-      {isLoading && <AnimatedLoader />}
     </section>
   );
 };
