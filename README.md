@@ -21,7 +21,7 @@ Our website also includes information about our hands-on workshops, aimed at tea
 # Tech Stack
 + Frontend: React.js
 + Backend: Node.js, Express
-+ Database: MongoDB
++ Database: Firebase
 + Hosting: Netlify
 
 # Contributing
