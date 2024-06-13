@@ -1,5 +1,5 @@
 # EdTech Startup Engineering Services Website
-Welcome to the GitHub repository for our early-stage EdTech startup! This project showcases our engineering services through an open-source website designed to highlight our expertise in various fields such as 3D printing, design and fabrication, structural analysis, CFD analysis, and more.
+This project showcases our engineering services through an open-source website designed to highlight our expertise in various fields such as 3D printing, design and fabrication, structural analysis, CFD analysis, and more.
 
 # About
 This repository contains the source code for our website, which serves as a platform to:
